@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Encriptado</title>
+  <meta charset="utf-8">
+</head>
+<body>
+
+    <style>
+        body {
+          background-image: url("https://images.pling.com/img/00/00/33/91/33/1319087/af084a86dcd5e23d2d3b7e9c2cbd294c4646.png");
+        }
+        </style>
+
+<label for="password">Introducir contrasena:</label>
+<input type="password" size="25" minlengt="8" id="password"/>
+<br><br>
+<button type="submit" onclick="encriptar(this)">Encriptar</button>
+<!-- <button type="submit" onclick="desencriptar(this)">Desencriptar</button> -->
+
+<p id='resultado'></p>
+
+<script>
+function encriptar(elemento){
+    var palabra = document.getElementsByTagName("input")[0].value;
+    var palabra_codificada = btoa(palabra);
+    document.getElementById("resultado").innerHTML = palabra_codificada;
+}
+ 
+// function desencriptar(elemento){
+//     var palabra = document.getElementsByTagName("input")[0].value;
+//     var palabra_descodificada = atob(palabra);
+//     document.getElementById("resultado").innerHTML = palabra_descodificada;
+// }
+</script>
+</body>
+</html>
